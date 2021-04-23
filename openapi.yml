@@ -10,8 +10,8 @@ servers:
       description: Optional server description, e.g. Internal staging server for testing
 paths:
     /users:
-        get:
-            summary: Returns a list of users.
+        post:
+            summary: Creación de un usuario
             description: Optional extended description in CommonMark or HTML.
             responses:
                 '200':    # status code
@@ -19,6 +19,44 @@ paths:
                     content:
                         application/json:
                             schema:
-                                type: array
-                                items:
-                                    type: string
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                    full_name:
+                                        type: string
+                                    profile_photo_url:
+                                        type: string
+                                    phone_code:
+                                        type: string
+                                    phone_number:
+                                        type: string
+                                    email:
+                                        type: string
+                                    username:
+                                        type: string
+# Usuarios
+#servicio de session, si existe vuelve token, si no existe devuelve error
+#crear cuenta, devuelve token
+#validacion de disponibilidad de nombre de usuario
+#modificar perfil
+#show profile
+#crear post
+#eliminar post
+#cerrar sesion
+# visibilidad de perfil
+
+# Match
+# index matches
+# enviar monedas entre perfiles
+
+# Sesiones
+# checkin - monedas, datos de usuario
+
+#Home
+# servicio de home, seccion de match, arreglo de perfiles
+# dar like/dislike, pagar por match
+
+# Compra de monedas
+# Index de planes
+# comprar un plan
